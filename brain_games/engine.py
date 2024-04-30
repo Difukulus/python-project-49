@@ -14,7 +14,7 @@ def start(game):
     cnt = 0
     while cnt < 3:
         question = game.generate_question()
-        print(game.ask_question(question))
+        game.ask_question(question)
         user_answer = prompt.string('Your answer: ')
         true_answer = game.result(question)
         if user_answer == true_answer:
