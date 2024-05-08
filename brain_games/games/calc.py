@@ -8,7 +8,7 @@ def generate_question():
     number1 = random.randint(1, 10)
     number2 = random.randint(1, 10)
     operator = random.choice(['+', '-', '*'])
-    equation = f'{RANDOM_NUMBER1} {operator} {RANDOM_NUMBER2}'
+    equation = f'{number1} {operator} {number2}'
     return equation
 
 
