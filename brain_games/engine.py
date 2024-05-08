@@ -10,7 +10,7 @@ def welcome_user():
 
 def start(game):
     name = welcome_user()
-    print(game.task)
+    print(game.TASK)
     cnt = 0
     while cnt < 3:
         question = game.generate_question()

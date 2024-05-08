@@ -1,20 +1,19 @@
 import random
 
 
-task = 'What is the result of the expression?'
+TASK = 'What is the result of the expression?'
 
 
 def generate_question():
-    num = random.randint(1, 10)
-    num2 = random.randint(1, 10)
+    number1 = random.randint(1, 10)
+    number2 = random.randint(1, 10)
     operator = random.choice(['+', '-', '*'])
-    equation = f'{num} {operator} {num2}'
+    equation = f'{RANDOM_NUMBER1} {operator} {RANDOM_NUMBER2}'
     return equation
 
 
 def ask_question(equation):
     print(f'Question: {equation}')
-    return equation
 
 
 def result(equation):
