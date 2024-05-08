@@ -11,8 +11,9 @@ def welcome_user():
 def start(game):
     name = welcome_user()
     print(game.TASK)
+    game_rounds = 3
     cnt = 0
-    while cnt < 3:
+    while cnt < game_rounds:
         question = game.generate_question()
         game.ask_question(question)
         user_answer = prompt.string('Your answer: ')
