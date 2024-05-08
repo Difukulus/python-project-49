@@ -12,7 +12,7 @@ def generate_question():
 
 
 def ask_question(numbers_lst):
-    print(f'Question: {numbers_lst[0]}, {numbers_lst[1]}')
+    print(f'Question: {numbers_lst[0]} {numbers_lst[1]}')
     return numbers_lst
 
 
