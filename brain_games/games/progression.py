@@ -5,10 +5,11 @@ TASK = 'What number is missing in the progression?'
 
 
 def generate_progression(progression):
-    random_index = random.randint(1, len(progression) - 1)
-    correct_answer = progression[random_index]
+    last_index = len(progression) - 1
+    random_index = random.randint(1, last_index)
+    correct_answer = str(progression[random_index])
     progression[random_index] = '..'
-    return correct_answer, progression
+    return progression, correct_answer
 
 
 def generate_question():
@@ -21,15 +22,6 @@ def generate_question():
         next_number += step
         progression.append(next_number)
     hiden_progression = generate_progression(progression)
-    return hiden_progression
-
-
-def ask_question(hiden_progression):
-    correct_answer, progression = hiden_progression
-    progression = ' '.join(str(item) for item in progression)
-    print(f'Question: {progression}')
-
-
-def result(hiden_progression):
-    correct_answer, progression = hiden_progression
-    return str(correct_answer)
+    progression, correct_answer = hiden_progression
+    question = ' '.join(str(item) for item in progression)
+    return question, correct_answer

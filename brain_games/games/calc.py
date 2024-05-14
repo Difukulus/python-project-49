@@ -2,19 +2,14 @@ import random
 
 
 TASK = 'What is the result of the expression?'
+MIN_NUMBER = 1
+MAX_NUMBER = 10
 
 
 def generate_question():
-    number1 = random.randint(1, 10)
-    number2 = random.randint(1, 10)
+    number1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    number2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     operator = random.choice(['+', '-', '*'])
-    equation = f'{number1} {operator} {number2}'
-    return equation
-
-
-def ask_question(equation):
-    print(f'Question: {equation}')
-
-
-def result(equation):
-    return str(eval(equation))
+    question = f'{number1} {operator} {number2}'
+    correct_answer = str(eval(question))
+    return question, correct_answer

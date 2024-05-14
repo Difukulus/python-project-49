@@ -5,6 +5,30 @@
 lint status:
 [![Maintainability](https://api.codeclimate.com/v1/badges/1be6042500fe3a537f27/maintainability)](https://codeclimate.com/github/Difukulus/python-project-49/maintainability)
 
+## Description
+
+brain-games are 5 console mini games
+
+## Instructions
+to start the game you need to enter 1 of the commands:
+```bash
+barin-calc
+brain-even
+brain-gcd
+brain-progression
+brain-prime
+```
+
+to complete the game you need to answer the questions correctly 3 times in a row
+
+### Installation
+
+clone the repository
+```bash
+https://github.com/Difukulus/python-project-49.git
+```
+## Gameplay
+
 brain-even:
 [![asciicast](https://asciinema.org/a/iSzRldwFwlXcGgNEgmiJZgsUp.svg)](https://asciinema.org/a/iSzRldwFwlXcGgNEgmiJZgsUp)
 
@@ -19,3 +43,5 @@ brain-progression:
 
 brain-prime:
 [![asciicast](https://asciinema.org/a/ii4yFzSMlHVAzHxUe54EaG6rP.svg)](https://asciinema.org/a/ii4yFzSMlHVAzHxUe54EaG6rP)
+
+
