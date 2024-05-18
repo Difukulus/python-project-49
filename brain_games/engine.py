@@ -1,7 +1,7 @@
 import prompt
 
 
-GAME_ROUNDS = 3
+ROUNDS_COUNT = 3
 
 
 def welcome_user():
@@ -14,17 +14,14 @@ def welcome_user():
 def start(game):
     name = welcome_user()
     print(game.TASK)
-    cnt = 0
-    while cnt < GAME_ROUNDS:
+    for _ in range(ROUNDS_COUNT):
         question, correct_answer = game.generate_question()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
-        if user_answer == correct_answer:
-            print('Correct!')
-            cnt += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer \
-was '{correct_answer}'.\nLet\'s try again, {name}!")
-            break
-        if cnt == 3:
-            print(f'Congratulations, {name}!')
+        if not user_answer == correct_answer:
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.\n"
+                  f"Let's try again, {name}!")
+            return
+        print('Correct!')
+    print(f'Congratulations, {name}!')
